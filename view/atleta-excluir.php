@@ -1,7 +1,17 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: 00554653230
- * Date: 12/03/2018
- * Time: 20:33
- */
+ * Created by PhpStorm. */
+
+include '../vendor/autoload.php';
+
+//Verificar se o usuario está logado
+$uDAO = new \App\DAO\UsuarioDAO();
+$uDAO->verificar();
+
+
+$p = new \App\Model\Atleta();
+$p->setId($_GET['id']);
+
+$pDAO = new \App\DAO\ProdutoDAO();
+if ($pDAO->excluir($p))
+    header("Location:atleta-pesquisar.php?msg=1");

@@ -15,15 +15,28 @@
                 include '../vendor/autoload.php';
                 $u = new \App\Model\Usuario();
                 $u->setEmail($_POST['email']);
+                $u->setSenha($_POST['senha']);
+
+                $uDao = new \App\DAO\UsuarioDAO();
+                if ($uDao->login($u))
+                    header("Location: atleta-pesquisar.php");
+                else
+                    echo "<div class='alert alert-danger'>E=mail ou senha incorretos!</div>";
+
             }
-
-
-
-
-
-
-
         ?>
 
+        <form action="login.php" method="post">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" placeholder="nome.sobrenome@gmail.com" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" class="form-control">
+            </div>
+            <input type="submit" value="Logar" class="btn btn-success col-12">
+        </form>
+    </div>
 </body>
 </html>
