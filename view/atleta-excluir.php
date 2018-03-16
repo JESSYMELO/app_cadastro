@@ -12,6 +12,6 @@ $uDAO->verificar();
 $p = new \App\Model\Atleta();
 $p->setId($_GET['id']);
 
-$pDAO = new \App\DAO\ProdutoDAO();
+$pDAO = new \App\DAO\AtletaDAO();
 if ($pDAO->excluir($p))
     header("Location:atleta-pesquisar.php?msg=1");

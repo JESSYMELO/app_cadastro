@@ -17,9 +17,10 @@ class AtletaDAO extends Conexao
         $sql = "insert into atleta (idade, altura, posicao, data_nasc) VALUES (:idade, :altura, :posicao, :data_nasc)";
         try{
             $i = $this->conexao->prepare($sql);
+            $i->bindValue(":nome", $atleta->getNome());
             $i->bindValue(":idade", $atleta->getIdade());
             $i->bindValue(":altura", $atleta->getAltura());
-            $i->bindValue(":posicao", $atleta->getposicao());
+            $i->bindValue(":posicao", $atleta->getPosicao());
             $i->bindValue(":data_nasc", $atleta->getData_nasc());
             $i->execute();
             return true;
@@ -73,6 +74,7 @@ class AtletaDAO extends Conexao
         $sql =  "update atletas set idade = :idade, altura = :altura, posicao = :posicao, data_nasc = :data_nasc WHERE id = :id";
         try{
             $p = $this->conexao->prepare($sql);
+            $p->bindValue("nome", $atleta->getNome());
             $p->bindValue("id", $atleta->getId());
             $p->bindValue("idade", $atleta->getIdade());
             $p->bindValue("altura", $atleta->getAltura());

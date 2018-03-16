@@ -12,7 +12,8 @@ $uDAO->verificar();
 
 if ($_POST){
     $p = new \App\Model\Atleta();
-    $p->setIdade($_POST['descricao']);
+    $p->setNome($_POST['nome']);
+    $p->setIdade($_POST['idade']);
     $p->setAltura(\App\Helper\Moeda::set($_POST['altura']));
 
     !empty($_POST['posicao']) ? $p->setPosicao(($_POST['posicao'])) : $p->setPosicao(null);
@@ -25,7 +26,11 @@ if ($_POST){
 }
 
 ?>
-    <form action="atleta-alterar.php" method="post">
+    <form action="lista-atleta.php" method="post">
+        <div class="form-group">
+            <label for="nome"><span class="text-danger">*</span> Nome</label>
+            <input type="text" id="nome" name="nome" required autofocus class="form-control" value="<?php echo $resultado['nome']; ?>">
+        </div>
         <div class="form-group">
             <label for="idade"><span class="text-danger">*</span> Idade</label>
             <input type="text" id="idade" name="idade" required autofocus class="form-control" value="<?php echo $resultado['idade']; ?>">
@@ -39,14 +44,14 @@ if ($_POST){
             <input type="text" id="posicao" name="posicao" class="form-control" value="<?php echo ($resultado['posicao']); ?>">
         </div>
         <div class="form-group">
-            <label for="data_nasc">Data_nasc</label>
+            <label for="data_nasc">Data de nascimento</label>
             <input type="date" id="data_nasc" name="data_nasc" class="form-control" value="<?php echo \App\Helper\Data::get( $resultado['data_nasc']); ?>">
         </div>
         <div class="form-group">
             Os campos com <span class="text-danger">*</span> não podem estar em branco.
         </div>
         <button type="submit" class="btn btn-success">
-            <img src="../assets/images/ic_done_white_24px.svg" alt="Cadastrar o Atleta"> Alterar
+            <img src="../assets/imagens/confirmar.svg" alt="Cadastrar"> Cadastrar
         </button>
     </form>
 <?php include 'rodape.php';?>

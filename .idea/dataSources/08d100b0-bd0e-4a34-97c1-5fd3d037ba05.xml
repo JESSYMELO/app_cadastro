@@ -933,75 +933,80 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="231" name="idade">
+    <column id="235" parent="231" name="nome">
       <Position>2</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="236" parent="231" name="altura">
-      <Position>3</Position>
-      <DataType>decimal(10,2)|0</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="237" parent="231" name="posicao">
-      <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="238" parent="231" name="data_nasc">
+    <column id="236" parent="231" name="idade">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="237" parent="231" name="altura">
+      <Position>4</Position>
+      <DataType>decimal(10,2)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="238" parent="231" name="posicao">
       <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="239" parent="231" name="data_nasc">
+      <Position>6</Position>
       <DataType>date|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="239" parent="231" name="PRIMARY">
+    <key id="240" parent="231" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="240" parent="232" name="id">
+    <column id="241" parent="232" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="241" parent="232" name="email">
+    <column id="242" parent="232" name="email">
       <Position>2</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="232" name="senha">
+    <column id="243" parent="232" name="senha">
       <Position>3</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="243" parent="232" name="PRIMARY">
+    <key id="244" parent="232" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="244" parent="233" name="id">
+    <column id="245" parent="233" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="233" name="nome">
+    <column id="246" parent="233" name="nome">
       <Position>2</Position>
       <DataType>varchar(200)|0</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="246" parent="233" name="valor">
+    <column id="247" parent="233" name="valor">
       <Position>3</Position>
       <DataType>decimal(10,2)|0</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="247" parent="233" name="PRIMARY">
+    <key id="248" parent="233" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
