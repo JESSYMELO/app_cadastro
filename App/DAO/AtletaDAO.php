@@ -14,14 +14,14 @@ class AtletaDAO extends Conexao
 {
     public function inserir($atleta)
     {
-        $sql = "insert into atleta (idade, altura, posicao, data_nasc) VALUES (:idade, :altura, :posicao, :data_nasc)";
+        $sql = "insert into atletas (nome, idade, altura, posicao, data_nasc) VALUES (:nome, :idade, :altura, :posicao, :data_nasc)";
         try{
             $i = $this->conexao->prepare($sql);
             $i->bindValue(":nome", $atleta->getNome());
             $i->bindValue(":idade", $atleta->getIdade());
             $i->bindValue(":altura", $atleta->getAltura());
             $i->bindValue(":posicao", $atleta->getPosicao());
-            $i->bindValue(":data_nasc", $atleta->getData_nasc());
+            $i->bindValue(":data_nasc", $atleta->getDataNasc());
             $i->execute();
             return true;
 
@@ -32,10 +32,10 @@ class AtletaDAO extends Conexao
     }
     public function pesquisar($atleta = null)
     {
-        $sql = "select * from atletas WHERE idade LIKE :idade";
+        $sql = "select * from atletas WHERE nome LIKE :nome";
         try{
             $p = $this->conexao->prepare($sql);
-            $p->bindValue(":idade", "%".$atleta->getIdade()."%");
+            $p->bindValue(":nome", "%".$atleta->getNome()."%");
             $p->execute();
             return $p->fetchAll(\PDO::FETCH_CLASS, "\App\Model\Atleta");
 
@@ -46,7 +46,7 @@ class AtletaDAO extends Conexao
     }
     public function excluir($atleta)
     {
-        $sql = "delete from $atleta WHERE id = :id";
+        $sql = "delete from atletas WHERE id = :id";
         try{
             $d = $this->conexao->prepare($sql);
             $d->bindValue(":id", $atleta->getId());
@@ -71,7 +71,7 @@ class AtletaDAO extends Conexao
     }
 
     public function alterar($atleta){
-        $sql =  "update atletas set idade = :idade, altura = :altura, posicao = :posicao, data_nasc = :data_nasc WHERE id = :id";
+        $sql =  "update atletas set nome = :nome, idade = :idade, altura = :altura, posicao = :posicao, data_nasc = :data_nasc WHERE id = :id";
         try{
             $p = $this->conexao->prepare($sql);
             $p->bindValue("nome", $atleta->getNome());
@@ -79,7 +79,7 @@ class AtletaDAO extends Conexao
             $p->bindValue("idade", $atleta->getIdade());
             $p->bindValue("altura", $atleta->getAltura());
             $p->bindValue("posicao", $atleta->getPosicao());
-            $p->bindValue("data_nasc", $atleta->getData_nasc());
+            $p->bindValue("data_nasc", $atleta->getDataNasc());
             $p->execute();
             return true;
 

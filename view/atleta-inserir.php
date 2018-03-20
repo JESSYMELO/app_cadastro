@@ -53,5 +53,9 @@ if ($_POST){
         <button type="submit" class="btn btn-success">
             <img src="../assets/imagens/confirmar.svg" alt="Cadastrar"> Cadastrar
         </button>
+        <button type="submit" class="btn btn-success">
+            <img src = "../assets/imagens/posicoes-no-futsa-alas.png" alt="lista de todos atletas"> Lista de todos atletas
+        </button>
+
     </form>
 <?php include 'rodape.php';?>

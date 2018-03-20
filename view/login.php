@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="../assets/imagens/logoasbavi.jpg" height="100%">
+        <img src="../assets/imagens/logoasbavi.jpg">
         <h1>Usuários</h1>
         <?php
             if ($_POST){
@@ -20,7 +20,7 @@
 
                 $uDao = new \App\DAO\UsuarioDAO();
                 if ($uDao->login($u))
-                    header("Location: atleta-inserir.php");
+                    header("Location: atleta-pesquisar.php");
                 else
                     echo "<div class='alert alert-danger'>E=mail ou senha incorretos!</div>";
 

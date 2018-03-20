@@ -31,7 +31,7 @@ include 'cabecalho.php';?>
         echo "<div class='alert alert-success'>Atleta alterado com sucesso!</div>";
 
     $p = new \App\Model\Atleta();
-    isset($_GET['nome']) ? $p->setPosicao($_GET['nome']) : $p->set("");
+    isset($_GET['nome']) ? $p->setNome($_GET['nome']) : $p->setNome("");
 
     $pDAO = new \App\DAO\AtletaDAO();
     $atletas = $pDAO->pesquisar($p);

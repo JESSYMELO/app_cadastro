@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="login.php">Login</a>
-        <a class="navbar-brand" href="lista-atleta.php">Atletas</a>
+
 
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
