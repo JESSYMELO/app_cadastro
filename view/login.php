@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <img src="../assets/imagens/logoasbavi.jpg">
+        <img src="../assets/imagens/logoasbavi2.jpg" class="rounded mx-auto d-block ">
         <h1>Usuários</h1>
         <?php
             if ($_POST){

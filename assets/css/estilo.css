@@ -1,7 +1,8 @@
 h1{
     padding: 10px 0;
+    background-color: green;
 
 }
-nav{
-    background-color: black;
+.botao{
+    margin-top: 10px;
 }

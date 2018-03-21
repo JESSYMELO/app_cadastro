@@ -26,7 +26,7 @@ if ($_POST){
 }
 
 ?>
-    <form action="lista-atleta.php" method="post">
+    <form action="atleta-inserir.php" method="post">
         <div class="form-group">
             <label for="nome"><span class="text-danger">*</span> Nome</label>
             <input type="text" id="nome" name="nome" required autofocus class="form-control" value="<?php echo $resultado['nome']; ?>">
@@ -53,9 +53,13 @@ if ($_POST){
         <button type="submit" class="btn btn-success">
             <img src="../assets/imagens/confirmar.svg" alt="Cadastrar"> Cadastrar
         </button>
-        <button type="submit" class="btn btn-success">
-            <img src = "../assets/imagens/posicoes-no-futsa-alas.png" alt="lista de todos atletas"> Lista de todos atletas
-        </button>
-
     </form>
+
+        <form action="atleta-pesquisar.php">
+            <button  type="submit" class="btn btn-info botao">
+                <img src = "../assets/imagens/posicoes-no-futsa-alas.png" alt="lista de todos atletas" width="30" height="30"> Lista de todos atletas
+            </button>
+        </form>
+
+
 <?php include 'rodape.php';?>

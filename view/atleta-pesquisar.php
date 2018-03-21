@@ -1,7 +1,7 @@
 <?php
 $titulo = "Pesquisa de atleta";
 include 'cabecalho.php';?>
-    <h1>Pesquisar atleta</h1>
+    <h1>Pesquisar Atleta</h1>
     <br>
     <form class="form-inline" action="atleta-pesquisar.php" method="get">
         <div class="form-group">
@@ -59,7 +59,7 @@ include 'cabecalho.php';?>
             echo "<td>".\App\Helper\Moeda::get($atleta->getAltura())."</td>";
             echo "<td>".\App\Helper\Data::get($atleta->getDataNasc())."</td>";
             echo "<td><a class='btn btn-danger' href='atleta-excluir.php?id={$atleta->getId()}'> Excluir</a></td>";
-            echo "<td><a class='btn btn-warning' href='atleta-alterar.php?id={$atleta->getId()}'>Alterar</a></td>";
+            echo "<td><a class='btn btn-dark' href='atleta-alterar.php?id={$atleta->getId()}'>Alterar</a></td>";
             echo "</tr>";
         }
         ?>
