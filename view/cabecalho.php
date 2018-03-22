@@ -9,8 +9,8 @@
     <title><?php echo $titulo; ?></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="login.php">Login</a>
+    <nav class="navbar navbar-expand-lg navbar-light nav-tabs nav-pills navbar-dark bg-dark">
+        <a class="navbar navbar-brand" href="login.php" >Login</a>
 
 
         <div class="collapse navbar-collapse">
