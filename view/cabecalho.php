@@ -12,12 +12,12 @@
     <nav class="navbar navbar-expand-lg navbar-light nav-tabs nav-pills navbar-dark bg-dark">
         <a class="navbar navbar-brand" href="login.php" >Login</a>
 
-
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
 
                 <li class="nav-item"><a href="atleta-inserir.php" class="nav-link">Novo atleta</a></li>
                 <li class="nav-item"><a href="atleta-pesquisar.php" class="nav-link">Pesquisar Atleta</a></li>
+                <li class="nav-item"><a href="alterar-senha.php" class="nav-link">Alterar Usuário</a></li>
 
             </ul>
         </div>

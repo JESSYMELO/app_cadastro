@@ -1,7 +1,7 @@
 <?php
 $titulo = "Pesquisa de atleta";
 include 'cabecalho.php';?>
-    <h1>Pesquisar Atleta</h1>
+    <h1 >Pesquisar Atleta</h1>
     <br>
     <form class="form-inline" action="atleta-pesquisar.php" method="get">
         <div class="form-group">
