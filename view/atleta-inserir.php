@@ -45,7 +45,7 @@ if ($_POST){
         </div>
         <div class="form-group">
             <label for="data_nasc">Data de nascimento</label>
-            <input type="date" id="data_nasc" name="data_nasc" class="form-control" value="<?php echo \App\Helper\Data::get( $resultado['data_nasc']); ?>">
+            <input type="date" id="data_nasc" name="data_nasc" class="form-control" value= "<?php echo \App\Helper\Data::get($resultado['data_nasc']); ?>">
         </div>
         <div class="form-group">
             Os campos com <span class="text-danger">*</span> não podem estar em branco.

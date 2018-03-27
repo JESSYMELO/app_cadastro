@@ -28,7 +28,7 @@ if ($_POST){
     <form action="alterar-senha.php" method="post">
         <div class="form-group">
             <label for="id">ID</label>
-            <input value="<?php echo $r['id']?> "type="number" id="id" name="id" class="form-control" readonly autofocus required>
+            <input value="<?php echo $r['id']?>" type="number" id="id" name="id" class="form-control" readonly autofocus required>
         </div>
         <div class="form-group">
             <label for="email">E-mail</label>

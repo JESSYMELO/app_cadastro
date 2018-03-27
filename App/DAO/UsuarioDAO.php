@@ -28,34 +28,36 @@ class UsuarioDAO extends Conexao
         }
     }
     public  function consulta($usuario) {
-        $sql = "select * from usuarios WHERE id = :id";
+        $sql = "select * from usuarios WHERE id= :id";
         try{
             $p = $this->conexao->prepare($sql);
             $p->bindValue("id", $usuario->getId());
 
             $p->execute();
             $resultado = $p->fetch();
+
             return $resultado;
 
-        } catch (\PDOException $e){
+        }catch (\PDOException $e){
             echo $e->getMessage();
         }
 
 
     }
     public function alterarUsuario($usuario) {
-        $sql = "update usuarios set email = :email, senha = :senha WHERE id = :id";
+        $sql = "update usuarios set email= :email, senha= :senha WHERE id = :id";
         try{
             $p = $this->conexao->prepare($sql);
 
+            $p->bindValue(":id", $usuario->getId());
             $p->bindValue("email", $usuario->getEmail());
             $p->bindValue("senha",\App\Helper\Senha::gerar($usuario->getSenha()));
-            $p->bindValue(":id", $usuario->getId());
+
             $p->execute();
 
             return true;
 
-    } catch (\PDOException $e){
+    }catch (\PDOException $e){
         echo $e->getMessage();
         }
     }
